@@ -3,19 +3,19 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev:ts": "bun build --watch --outfile=./dist/index.js ./src/index.ts",
-    "build": "bun build --outfile=./dist/index.js ./src/index.ts && bun tailwindcss -i ./src/styles/index.css -o ./dist/index.css",
-    "deploy": "bun run build && gh-pages -d dist"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "concurrently": "^9.1.2",
-    "gh-pages": "^6.3.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "3"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "devts": "bun build --watch --outfile=./dist/index.js ./src/index.ts",
+  "build": "bun build --outfile=./dist/index.js ./src/index.ts",
+  "deploy": "bun run build && gh-pages -d dist"
+},
+"devDependencies": {
+  "@types/bun": "latest",
+  "concurrently": "^9.1.2",
+  "gh-pages": "^6.3.0",
+  "prettier": "^3.4.2",
+  "prettier-plugin-tailwindcss": "^0.6.11"
+},
+"peerDependencies": {
+  "typescript": "^5.0.0"
+}
+
 }
